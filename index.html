@@ -2537,36 +2537,7 @@ thumbs.forEach((thumb, index) => {
                 });
             }
 
-            function updateSlides(carousel) {
-                requestAnimationFrame(() => {
-                    const slides = elements[`slidesWrapper${carousel}`].querySelectorAll('.slide');
-                    const thumbnails = elements[`thumbnails${carousel}`].querySelectorAll('.thumbnail');
-                    const items = state.mode === 'series' ? (
-                        carousel === 'A' ? [
-                            config.series.find(item => item.seriesId === 0 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 1 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 2 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 3 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 4 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 5 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 6 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 7 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 8 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 1")
-                        ].filter(Boolean) : carousel === 'B' ? [
-                            config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 12")
-                        ].filter(Boolean) : [
-                            config.series.find(item => item.seriesId === 0 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 1 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 2 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 3 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 4 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 5 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 6 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 7 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 8 && item.episode === "Ep. 1"),
-                            config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 1")
-                        ].filter(Boolean)
+            
                     ) : carousel === 'A' ? config.series.filter(item => item.seriesId === state.currentSeriesId) : [];
 
                     const current = state.carousels[carousel].currentSlide;
@@ -2583,7 +2554,67 @@ thumbs.forEach((thumb, index) => {
                         thumbnail.classList.toggle('active', i === current);
                     });
 
-                    if ((state.mode === 'series' || carousel === 'A') && thumbnails.length) {
+     function updateSlides(carousel) {
+  requestAnimationFrame(() => {
+    const slides = elements[`slidesWrapper${carousel}`].querySelectorAll('.slide');
+    const thumbnails = elements[`thumbnails${carousel}`].querySelectorAll('.thumbnail');
+
+    const items = state.mode === 'series' ? (
+      carousel === 'A' ? [
+        // 🔹 Animes fixos
+        config.series.find(item => item.seriesId === 0 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 1 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 2 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 3 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 4 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 5 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 6 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 7 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 8 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 1"),
+
+        // 🔹 Animes dinâmicos vindos do JSON (ex: Naruto com seriesId >= 10)
+        ...[...new Set(config.series.map(item => item.seriesId))]
+          .filter(id => id >= 10)
+          .map(id => config.series.find(item => item.seriesId === id && item.episode === "Ep. 1"))
+      ].filter(Boolean)
+
+      : carousel === 'B' ? [
+        config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 12")
+      ].filter(Boolean)
+
+      : [
+        config.series.find(item => item.seriesId === 0 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 1 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 2 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 3 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 4 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 5 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 6 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 7 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 8 && item.episode === "Ep. 1"),
+        config.series.find(item => item.seriesId === 9 && item.episode === "Ep. 1"),
+
+        // 🔹 Também adiciona os novos no carrossel C
+        ...[...new Set(config.series.map(item => item.seriesId))]
+          .filter(id => id >= 10)
+          .map(id => config.series.find(item => item.seriesId === id && item.episode === "Ep. 1"))
+      ].filter(Boolean)
+
+    ) : carousel === 'A' ? config.series.filter(item => item.seriesId === state.currentSeriesId) : [];
+
+    const current = state.carousels[carousel].currentSlide;
+
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active', 'prev', 'next');
+      if (i === current) slide.classList.add('active');
+      else if (state.mode === 'series') {
+        if (i === (current - 1 + items.length) % items.length) slide.classList.add('prev');
+        else if (i === (current + 1) % items.length) slide.classList.add('next');
+      }
+    });
+  });
+     }               if ((state.mode === 'series' || carousel === 'A') && thumbnails.length) {
                         const offset = (current - Math.floor(state.carousels[carousel].thumbnailsVisible / 2)) * state.carousels[carousel].thumbnailWidth;
                         elements[`thumbnails${carousel}`].style.transform = `translateX(-${Math.max(0, offset)}px)`;
                     }
