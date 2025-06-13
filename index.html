@@ -2806,21 +2806,50 @@ thumbs.forEach((thumb, index) => {
     </script>
 </body>
 <script>
-  window.config = window.config || { series: [] }; // Garante que config existe
+  function showNotification(message) {
+    notification.textContent = message;
+    notification.classList.add('show');
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 3000);
+  }
+
+  initialize();
+</script>
+
+<!-- ✅ AQUI você cola o trecho do fetch JSON -->
+<script>
+  window.config = window.config || { series: [] };
 
   fetch('animesAdicionais.json')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-      if (Array.isArray(data.series)) {
-        window.config.series = window.config.series.concat(data.series);
-      }
+      if (!data.animeSeries) return;
 
-      // Espera DOM e funções estarem carregadas
+      const submenu = document.getElementById('anime-list-submenu');
+
+      data.animeSeries.forEach(serie => {
+        serie.episodes.forEach(episode => {
+          window.config.series.push({
+            ...episode,
+            seriesId: serie.id
+          });
+        });
+
+        const link = document.createElement('a');
+        link.className = 'menu__link submenu__link';
+        link.href = '#';
+        link.setAttribute('data-series', serie.id);
+        link.innerHTML = `<i class="fas fa-video"></i>${serie.title}`;
+        submenu.appendChild(link);
+      });
+
       if (typeof createCarousels === 'function') {
         createCarousels();
       }
     })
-    .catch(error => console.error('Erro ao carregar JSON externo:', error));
+    .catch(err => console.error("Erro ao carregar JSON:", err));
 </script>
-</html>
+
+</body>
 </html>
