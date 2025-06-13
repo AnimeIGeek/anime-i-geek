@@ -1,0 +1,98 @@
+{
+  "animeSeries": [
+    {
+      "id": 10,
+      "title": "Naruto",
+      "description": "Um jovem ninja determinado a se tornar Hokage.",
+      "cover": "https://i.postimg.cc/0N0yvnf1/naruto-capa.jpg",
+      "category": "shounen",
+      "featured": true,
+      "episodes": [
+        {
+          "title": "Naruto Uzumaki Chega!",
+          "episode": "Ep. 1",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/yYtMgT7q/naruto-ep1.jpg",
+          "link": "https://drive.google.com/file/d/xyz123/view?usp=drivesdk"
+        },
+        {
+          "title": "Meu Nome é Konohamaru!",
+          "episode": "Ep. 2",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/Ls2yL4yT/naruto-ep2.jpg",
+          "link": "https://drive.google.com/file/d/abc456/view?usp=drivesdk"
+        },
+        {
+          "title": "Sasuke e Sakura: Amigos ou Rivais?",
+          "episode": "Ep. 3",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/D0C2vdWP/naruto-ep3.jpg",
+          "link": "https://drive.google.com/file/d/def789/view?usp=drivesdk"
+        },
+        {
+          "title": "A Primeira Missão!",
+          "episode": "Ep. 4",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/KY3xTNSZ/naruto-ep4.jpg",
+          "link": "https://drive.google.com/file/d/ghi000/view?usp=drivesdk"
+        },
+        {
+          "title": "O Encontro com o Inimigo",
+          "episode": "Ep. 5",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/3xjVm1TG/naruto-ep5.jpg",
+          "link": "https://drive.google.com/file/d/jkl111/view?usp=drivesdk"
+        },
+        {
+          "title": "A Ponte do Coragem",
+          "episode": "Ep. 6",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/W1Jv1r2s/naruto-ep6.jpg",
+          "link": "https://drive.google.com/file/d/mno222/view?usp=drivesdk"
+        },
+        {
+          "title": "Zabuza Ataca!",
+          "episode": "Ep. 7",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/Jz8cN3QC/naruto-ep7.jpg",
+          "link": "https://drive.google.com/file/d/pqr333/view?usp=drivesdk"
+        },
+        {
+          "title": "O Espadachim da Névoa",
+          "episode": "Ep. 8",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/2SHsTzpt/naruto-ep8.jpg",
+          "link": "https://drive.google.com/file/d/stu444/view?usp=drivesdk"
+        },
+        {
+          "title": "Kakashi Usa o Sharingan",
+          "episode": "Ep. 9",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/Y2zHKJpH/naruto-ep9.jpg",
+          "link": "https://drive.google.com/file/d/vwx555/view?usp=drivesdk"
+        },
+        {
+          "title": "A Decisão de Naruto",
+          "episode": "Ep. 10",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/YqTWkRCx/naruto-ep10.jpg",
+          "link": "https://drive.google.com/file/d/yzb666/view?usp=drivesdk"
+        },
+        {
+          "title": "Treinamento Intenso",
+          "episode": "Ep. 11",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/ZRf29rCg/naruto-ep11.jpg",
+          "link": "https://drive.google.com/file/d/bca777/view?usp=drivesdk"
+        },
+        {
+          "title": "Naruto Mostra Sua Força",
+          "episode": "Ep. 12",
+          "duration": "duração: 23 minutos",
+          "image": "https://i.postimg.cc/Wzpg0G9N/naruto-ep12.jpg",
+          "link": "https://drive.google.com/file/d/edf888/view?usp=drivesdk"
+        }
+      ]
+    }
+  ]
+}
