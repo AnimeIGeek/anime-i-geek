@@ -2817,7 +2817,7 @@ thumbs.forEach((thumb, index) => {
   initialize();
 </script>
 
-<!-- ✅ AQUI você cola o trecho do fetch JSON -->
+<!-- ✅ Código JS COMPLETO que carrega o JSON e cria tudo -->
 <script>
   window.config = window.config || { series: [] };
 
@@ -2827,8 +2827,10 @@ thumbs.forEach((thumb, index) => {
       if (!data.animeSeries) return;
 
       const submenu = document.getElementById('anime-list-submenu');
+      const sectionA = document.querySelector('#section-a .swiper-wrapper'); // Alvo do carrossel
 
       data.animeSeries.forEach(serie => {
+        // 1. Adiciona episódios ao array global
         serie.episodes.forEach(episode => {
           window.config.series.push({
             ...episode,
@@ -2836,14 +2838,33 @@ thumbs.forEach((thumb, index) => {
           });
         });
 
+        // 2. Cria o item no menu lateral
         const link = document.createElement('a');
         link.className = 'menu__link submenu__link';
         link.href = '#';
         link.setAttribute('data-series', serie.id);
         link.innerHTML = `<i class="fas fa-video"></i>${serie.title}`;
         submenu.appendChild(link);
+
+        // 3. Cria o card visual no carrossel
+        const firstEpisode = serie.episodes[0];
+        if (sectionA && firstEpisode) {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          slide.innerHTML = `
+            <div class="card" data-series="${serie.id}">
+              <img src="${firstEpisode.image}" alt="${serie.title}">
+              <div class="card__content">
+                <h3 class="card__title">${serie.title}</h3>
+                <p class="card__description">${serie.description}</p>
+              </div>
+            </div>
+          `;
+          sectionA.appendChild(slide);
+        }
       });
 
+      // 4. Ativa os carrosséis novamente
       if (typeof createCarousels === 'function') {
         createCarousels();
       }
