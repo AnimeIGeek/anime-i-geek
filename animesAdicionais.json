@@ -9,6 +9,7 @@
       "featured": true,
       "episodes": [
         {
+          "seriesId": 10,
           "title": "Naruto Uzumaki Chega!",
           "episode": "Ep. 1",
           "duration": "duração: 23 minutos",
@@ -16,6 +17,7 @@
           "link": "https://drive.google.com/file/d/xyz123/view?usp=drivesdk"
         },
         {
+          "seriesId": 10,
           "title": "Meu Nome é Konohamaru!",
           "episode": "Ep. 2",
           "duration": "duração: 23 minutos",
@@ -23,6 +25,7 @@
           "link": "https://drive.google.com/file/d/abc456/view?usp=drivesdk"
         },
         {
+          "seriesId": 10,
           "title": "Sasuke e Sakura: Amigos ou Rivais?",
           "episode": "Ep. 3",
           "duration": "duração: 23 minutos",
@@ -30,6 +33,7 @@
           "link": "https://drive.google.com/file/d/def789/view?usp=drivesdk"
         },
         {
+          "seriesId": 10,
           "title": "A Primeira Missão!",
           "episode": "Ep. 4",
           "duration": "duração: 23 minutos",
@@ -37,6 +41,7 @@
           "link": "https://drive.google.com/file/d/ghi000/view?usp=drivesdk"
         },
         {
+          "seriesId": 10,
           "title": "Zabuza Ataca!",
           "episode": "Ep. 5",
           "duration": "duração: 23 minutos",
@@ -44,53 +49,12 @@
           "link": "https://drive.google.com/file/d/jkl111/view?usp=drivesdk"
         },
         {
+          "seriesId": 10,
           "title": "O Espadachim da Névoa",
           "episode": "Ep. 6",
           "duration": "duração: 23 minutos",
           "image": "https://i.postimg.cc/2SHsTzpt/naruto-ep6.jpg",
           "link": "https://drive.google.com/file/d/mno222/view?usp=drivesdk"
-        },
-        {
-          "title": "Kakashi Usa o Sharingan",
-          "episode": "Ep. 7",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/Y2zHKJpH/naruto-ep7.jpg",
-          "link": "https://drive.google.com/file/d/vwx555/view?usp=drivesdk"
-        },
-        {
-          "title": "Naruto Mostra Sua Força",
-          "episode": "Ep. 8",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/Wzpg0G9N/naruto-ep8.jpg",
-          "link": "https://drive.google.com/file/d/edf888/view?usp=drivesdk"
-        },
-        {
-          "title": "O Time 7 em Perigo!",
-          "episode": "Ep. 9",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/YqTWkRCx/naruto-ep9.jpg",
-          "link": "https://drive.google.com/file/d/lmn999/view?usp=drivesdk"
-        },
-        {
-          "title": "Decisão Final de Kakashi",
-          "episode": "Ep. 10",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/ZRf29rCg/naruto-ep10.jpg",
-          "link": "https://drive.google.com/file/d/opq000/view?usp=drivesdk"
-        },
-        {
-          "title": "O Espírito da Aldeia",
-          "episode": "Ep. 11",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/3xjVm1TG/naruto-ep11.jpg",
-          "link": "https://drive.google.com/file/d/uvw111/view?usp=drivesdk"
-        },
-        {
-          "title": "Naruto: O Ninja Imbatível!",
-          "episode": "Ep. 12",
-          "duration": "duração: 23 minutos",
-          "image": "https://i.postimg.cc/KY3xTNSZ/naruto-ep12.jpg",
-          "link": "https://drive.google.com/file/d/zzz999/view?usp=drivesdk"
         }
       ]
     }
